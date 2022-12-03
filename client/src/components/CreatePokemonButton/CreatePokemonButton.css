@@ -1,0 +1,23 @@
+.createPokemon button {
+    margin: 0 10px;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: gold;
+    color: white;
+    border: 2px solid;
+    border-color: black;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.createPokemon button:hover {
+    margin: 0 10px;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border: 2px solid;
+    border-color: black;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}

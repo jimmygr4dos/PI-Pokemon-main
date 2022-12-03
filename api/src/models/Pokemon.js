@@ -6,13 +6,20 @@ module.exports = (sequelize) => {
   sequelize.define('pokemon', {
     id : {
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
+      defaultValue: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      get () {
+        const nameValue = this.getDataValue("name");
+        return nameValue[0].toUpperCase() + nameValue.slice(1);
+      },
+      set (nameValue) {
+        this.setDataValue("name", nameValue.toLowerCase());
+      },
     },
     hp: {
       type: DataTypes.INTEGER,

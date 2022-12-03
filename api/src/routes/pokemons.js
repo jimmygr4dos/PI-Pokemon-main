@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const { getApiData, getDbData, getApiDataByName, getApiDataById, 
-        getDbDataById, createPokemon, deletePokemon, updatePokemon } = require("./functions");
+const { getApiData, getDbData, getApiDataByName, getDBDataByName, getApiDataById, getDbDataById,
+        createPokemon, deletePokemon, updatePokemon } = require("./functions");
 
 const router = Router();
 
@@ -9,46 +9,61 @@ router.get('/', async (req, res) => {
     try {
 
         let { name } = req.query;
-        name = name.toLowerCase();
         if (name) {
+            name = name.toLowerCase();
+            console.log('name: ', name);
             //buscar datos de la api x nombre
             const apiPokemonByName = await getApiDataByName(name);
-            if (apiPokemonByName)
-                return res.json(apiPokemonByName);
+            if (apiPokemonByName) {
+                console.log('apiPokemonByName: ', apiPokemonByName)
+                return res.json({sucess: true, data: apiPokemonByName});
+            }
             //buscar datos de la db x nombre
             else {
-                const dbPokemonByName = await getDbData(name);
-                if (dbPokemonByName)
-                    return res.json(dbPokemonByName);
-                else
-                    return res.status(404).send("This Pokemon doesn't exist!");
+                const dbPokemonByName = await getDBDataByName(name);
+                if (dbPokemonByName.length > 0) {
+                    console.log('dbPokemonByName: ', dbPokemonByName)
+                    return res.json({sucess: true, data: dbPokemonByName});
+                }
+                else {
+                    console.log('throw error');
+                    throw Error(JSON.stringify({sucess: false, data: "This Pokemon doesn't exist!"}));
+                    // res.status(404).json({ error: "This Pokemon doesn't exist!" });
+                    // return res.status(404).send("This Pokemon doesn't exist!");
+                }
             }
         }
 
         else {
             const apiPokemons = await getApiData();
             const dbPokemons = await getDbData();
-            const allPokemons = [...apiPokemons, ...dbPokemons];
-            if (allPokemons)
+            if (dbPokemons) {
+                // const allPokemons = [...apiPokemons, ...dbPokemons];
+                const allPokemons = [...dbPokemons, ...apiPokemons];
                 return res.json(allPokemons);
+            }
+            else {
+                return res.json(apiPokemons);
+            }
+
         }
     
         
     } catch (error) {
-        console.log(error);
+        console.log(error.message);
         return res.status(404).send(error.message);
     }
 
 });
 
-router.get("/:idPokemon", async (req, res) => {
+router.get("/:id", async (req, res) => {
     try {
-        const { idPokemon } = req.params;
-        const apiPokemonById = await getApiDataById(idPokemon);
+        const { id } = req.params;
+        const apiPokemonById = await getApiDataById(id);
         if (apiPokemonById)
             return res.json(apiPokemonById);
         else {
-            const dbPokemonById = await getDbDataById(idPokemon);
+            const dbPokemonById = await getDbDataById(id);
             if (dbPokemonById)
                 return res.json(dbPokemonById);
             else
@@ -76,11 +91,11 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.delete("/:idPokemon", async (req, res) => {
+router.delete("/:id", async (req, res) => {
     try {
-        const { idPokemon } = req.params;
-        const pokemon = deletePokemon(idPokemon);
-        res.json(idPokemon);
+        const { id } = req.params;
+        const pokemon = await deletePokemon(id);
+        res.json(pokemon.message);
     } catch (error) {
         console.log(error);
         return res.status(404).send(error.message);        
@@ -95,7 +110,7 @@ router.put('/', async (req, res) => {
         const pokemon = await updatePokemon(
             id, name, hp, attack, defense, speed, height, weight, image, types
         );
-        return res.json(pokemon);
+        return res.json(pokemon.message);
     } catch (error) {
         console.log(error);
         return res.status(404).send(error.message);        

@@ -1,0 +1,177 @@
+/*
+    normal: 207, 200, 188
+    fighting: 247, 47, 32
+    flying: 149, 160, 204
+    poison: 167, 87, 171
+    ground: 224, 216, 139
+    rock: 171, 162, 97
+    bug: 135, 163, 70
+    ghost: 116, 81, 148
+    steel: 184, 183, 178
+    fire: 212, 130, 49
+    water: 51, 203, 214
+    grass: 115, 222, 147
+    electric: 245, 240, 91
+    psychic: 227, 68, 118
+    ice: 124, 217, 217
+    dragon: 64, 56, 122
+    dark: 110, 92, 64
+    fairy: 240, 177, 218
+    unknown: 67, 145, 107
+    shadow: 74, 79, 76
+*/
+
+:root {
+    --url: url('https://freesvg.org/img/Pokeball.png');
+}
+
+.cardPokemon {
+    width: 200px;
+    height: 245px;
+    border-radius: 15px;
+    padding: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* cardPokemon background colors */
+.fire {background-color: rgba(212, 130, 49, 0.5);} 
+.grass {background-color: rgba(115, 222, 147, 0.5);}
+.water {background-color: rgba(51, 203, 214, 0.5);}
+.electric {background-color: rgba(245, 240, 91, 0.5);}
+.rock {background-color: rgba(171, 162, 97, 0.5);}
+.ghost {background-color: rgba(116, 81, 148, 0.5);}
+.psychic {background-color: rgba(227, 68, 118, 0.5);}
+.poison {background-color: rgba(167, 87, 171, 0.5);}
+.bug {background-color: rgba(135, 163, 70, 0.5);}
+.fairy {background-color: rgba(240, 177, 218, 0.5);}
+.dark {background-color: rgba(110, 92, 64, 0.5);}
+.fighting {background-color: rgba(247, 47, 32, 0.5);}
+.normal {background-color: rgba(189, 185, 179, 0.5);}
+.dragon {background-color: rgba(64, 56, 122, 0.5);}
+.ground {background-color: rgba(224, 216, 139, 0.5);}
+.steel {background-color: rgba(184, 183, 178, 0.5);}
+.ice {background-color: rgba(124, 217, 217, 0.5);}
+.flying {background-color: rgba(149, 160, 204, 0.5);}
+.unknown {background-color: rgba(67, 145, 107, 0.5);}
+.shadow {background-color: rgba(74, 79, 76, 0.5);}
+/* END cardPokemon background colors */
+
+.topCard {
+    /* background-image: linear-gradient(rgba(115, 222, 147, 0.5), rgba(115, 222, 147, 0.8)), url('https://freesvg.org/img/Pokeball.png'); */
+    background-position: 26% 38%;
+    border-radius: 15px;
+    padding: 20px;
+    height: 40%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 22px;
+    justify-content: center;
+}
+
+/* topCard background colors */
+.topCardfire {background-image: linear-gradient(rgba(212, 130, 49, 0.5), rgba(212, 130, 49, 0.8)), var(--url);}
+.topCardgrass {background-image: linear-gradient(rgba(115, 222, 147, 0.5), rgba(115, 222, 147, 0.8)), var(--url);}
+.topCardwater {background-image: linear-gradient(rgba(51, 203, 214, 0.5), rgba(51, 203, 214, 0.8)), var(--url);}
+.topCardelectric {background-image: linear-gradient(rgba(245, 240, 91, 0.5), rgba(245, 240, 91, 0.8)), var(--url);}
+.topCardrock {background-image: linear-gradient(rgba(171, 162, 97, 0.5), rgba(171, 162, 97, 0.8)), var(--url);}
+.topCardghost {background-image: linear-gradient(rgba(116, 81, 148, 0.5), rgba(116, 81, 148, 0.8)), var(--url);}
+.topCardpsychic {background-image: linear-gradient(rgba(227, 68, 118, 0.5), rgba(227, 68, 118, 0.8)), var(--url);}
+.topCardpoison {background-image: linear-gradient(rgba(167, 87, 171, 0.5), rgba(167, 87, 171, 0.8)), var(--url);}
+.topCardbug {background-image: linear-gradient(rgba(135, 163, 70, 0.5), rgba(135, 163, 70, 0.8)), var(--url);}
+.topCardfairy {background-image: linear-gradient(rgba(240, 177, 218, 0.5), rgba(240, 177, 218, 0.8)), var(--url);}
+.topCarddark {background-image: linear-gradient(rgba(110, 92, 64, 0.5), rgba(110, 92, 64, 0.8)), var(--url);}
+.topCardfighting {background-image: linear-gradient(rgba(247, 47, 32, 0.5), rgba(247, 47, 32, 0.8)), var(--url);}
+.topCardnormal {background-image: linear-gradient(rgba(189, 185, 179, 0.5), rgba(189, 185, 179, 0.8)), var(--url);}
+.topCarddragon {background-image: linear-gradient(rgba(64, 56, 122, 0.5), rgba(64, 56, 122, 0.8)), var(--url);}
+.topCardground {background-image: linear-gradient(rgba(224, 216, 139, 0.5), rgba(224, 216, 139, 0.8)), var(--url);}
+.topCardsteel {background-image: linear-gradient(rgba(184, 183, 178, 0.5), rgba(184, 183, 178, 0.8)), var(--url);}
+.topCardice {background-image: linear-gradient(rgba(124, 217, 217, 0.5), rgba(124, 217, 217, 0.8)), var(--url);}
+.topCardflying {background-image: linear-gradient(rgba(149, 160, 204, 0.5), rgba(149, 160, 204, 0.8)), var(--url);}
+.topCardunknown {background-image: linear-gradient(rgba(67, 145, 107, 0.5), rgba(67, 145, 107, 0.8)), var(--url);}
+.topCardshadow {background-image: linear-gradient(rgba(74, 79, 76, 0.5), rgba(74, 79, 76, 0.8)), var(--url);}
+/* END topCard background colors */
+
+.typeContainer {
+    display: flex;
+    align-items: flex-start;
+}
+    
+.type {
+    /* background-color: rgba(115, 222, 147, 1); */
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px 4px 2px 4px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+/* type background colors */
+.typefire {background-color: rgba(212, 130, 49, 1);}
+.typegrass {background-color: rgba(115, 222, 147, 1);}
+.typewater {background-color: rgba(51, 203, 214, 1);}
+.typeelectric {background-color: rgba(245, 240, 91, 1);}
+.typerock {background-color: rgba(171, 162, 97, 1);}
+.typeghost {background-color: rgba(116, 81, 148, 1);}
+.typepsychic {background-color: rgba(227, 68, 118, 1);}
+.typepoison {background-color: rgba(167, 87, 171, 1);}
+.typebug {background-color: rgba(135, 163, 70, 1);}
+.typefairy {background-color: rgba(240, 177, 218, 1);}
+.typedark {background-color: rgba(110, 92, 64, 1);}
+.typefighting {background-color: rgba(247, 47, 32, 1);}
+.typenormal {background-color: rgba(189, 185, 179, 1);}
+.typedragon {background-color: rgba(64, 56, 122, 1);}
+.typeground {background-color: rgba(224, 216, 139, 1);}
+.typesteel {background-color: rgba(184, 183, 178, 1);}
+.typeice {background-color: rgba(124, 217, 217, 1);}
+.typeflying {background-color: rgba(149, 160, 204, 1);}
+.typeunknown {background-color: rgba(67, 145, 107, 1);}
+.typeshadow {background-color: rgba(74, 79, 76, 1);}
+/* END type background colors */
+
+.photo {
+    height: 100%;
+    width: 100%;
+}
+
+.link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    /* color: rgb(86, 120, 146); */
+    color: rgb(105, 110, 175);
+    font-size: 12px;
+}
+
+.link:hover {
+    /* color: rgb(88, 84, 27); */
+    color: white;
+}
+
+.moreinfo {
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    /* background-color:rgb(252, 245, 155); */
+    background: rgb(178, 235, 160);
+    /* background: linear-gradient(90deg, rgba(169,252,141,1) 0%, rgba(250,248,144,1) 100%); */
+}
+
+.moreinfo:hover {
+    background: rgb(48, 47, 47);
+}
+
+.bottomCard {
+    height: 26%;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@600&family=Montserrat:wght@600&family=Roboto:wght@100;400&display=swap');
+
+.lDivPrincipal {
+    margin: 0 auto 0 auto;
+    background-color: rgb(158, 49, 30);
+    padding: 6% 8%;
+    text-align: center;
+}
+
+.lDivSecundario {
+    background-color: rgb(235, 110, 37);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lDivLeft {
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+    width: 40%;
+    line-height: 10px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.label {
+    font-size: 14px;
+    line-height: 10px;
+}
+
+.lDivLeft img {
+    width: 10%;
+}
+
+.lDivRight {
+    width: 50%;
+}
+
+.lDivRight img {
+    width: 80%;
+}
+
+.lDivLeft button {
+    padding: 13px;
+    background-color: yellow;
+    border: 1px solid;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    width: 180px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.lDivLeft button:hover {
+    padding: 13px;
+    background-color: rgba(252, 78, 9, 0.959);
+    border: 1px solid;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    width: 180px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (min-device-width: 721px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    .lDivLeft {
+        font-family: 'IBM Plex Sans Devanagari', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: white;
+        width: 40%;
+        line-height: 2px;
+        text-align: left;
+        margin-left: 10%;
+    }
+
+}
+
+
+@media only screen and (max-device-width: 720px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .lDivLeft {
+        font-family: 'IBM Plex Sans Devanagari', sans-serif;
+        font-weight: 600;
+        font-size: 8px;
+        color: white;
+        width: 45%;
+        line-height: 2px;
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .label {
+        font-size: 6px;
+        line-height: 3px;
+    }
+
+    .lDivRight img {
+        width: 70%;
+    }
+
+    .lDivLeft button {
+        padding: 3px;
+        background-color: yellow;
+        border: 1px solid;
+        border-radius: 8px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 8px;
+        font-weight: 400;
+        color: black;
+        width: 90px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    
+    .lDivLeft button:hover {
+        padding: 3px;
+        background-color: rgba(252, 78, 9, 0.959);
+        border: 1px solid;
+        border-radius: 8px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 8px;
+        font-weight: 400;
+        color: white;
+        width: 90px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    
+    
+}

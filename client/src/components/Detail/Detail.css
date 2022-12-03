@@ -1,0 +1,142 @@
+/* cardPokemon background colors */
+.waterDetail {background: linear-gradient(rgba(51, 203, 214, 0.4), rgba(51, 203, 214, 1));}
+.fireDetail {background: linear-gradient(rgba(212, 130, 49, 0.4), rgba(212, 130, 49, 1));}
+.grassDetail {background: linear-gradient(rgba(115, 222, 147, 0.4), rgba(115, 222, 147, 1));}
+.electricDetail {background: linear-gradient(rgba(248, 242, 65, 0.6), rgba(248, 242, 65, 1));}
+.rockDetail {background: linear-gradient(rgba(171, 162, 97, 0.4), rgba(171, 162, 97, 1));}
+.ghostDetail {background: linear-gradient(rgba(116, 81, 148, 0.4), rgba(116, 81, 148, 1));}
+.psychicDetail {background: linear-gradient(rgba(227, 68, 118, 0.4), rgba(227, 68, 118, 1));}
+.poisonDetail {background: linear-gradient(rgba(167, 87, 171, 0.4), rgba(167, 87, 171, 1));}
+.bugDetail {background: linear-gradient(rgba(135, 163, 70, 0.4), rgba(135, 163, 70, 1));}
+.fairyDetail {background: linear-gradient(rgba(240, 177, 218, 0.4), rgba(240, 177, 218, 1));}
+.darkDetail {background: linear-gradient(rgba(110, 92, 64, 0.4), rgba(110, 92, 64, 1));}
+.fightingDetail {background: linear-gradient(rgba(247, 47, 32, 0.4), rgba(247, 47, 32, 1));}
+.normalDetail {background: linear-gradient(rgba(189, 185, 179, 0.4), rgba(189, 185, 179, 1));}
+.dragonDetail {background: linear-gradient(rgba(64, 56, 122, 0.4), rgba(64, 56, 122, 1));}
+.groundDetail {background: linear-gradient(rgba(224, 216, 139, 0.4), rgba(224, 216, 139, 1));}
+.steelDetail {background: linear-gradient(rgba(184, 183, 178, 0.4), rgba(184, 183, 178, 1));}
+.iceDetail {background: linear-gradient(rgba(124, 217, 217, 0.4), rgba(124, 217, 217, 1));}
+.flyingDetail {background: linear-gradient(rgba(149, 160, 204, 0.4), rgba(149, 160, 204, 1));}
+.unknownDetail {background: linear-gradient(rgba(67, 145, 107, 0.4), rgba(67, 145, 107, 1));}
+.shadowDetail {background: linear-gradient(rgba(74, 79, 76, 0.4), rgba(74, 79, 76, 1));}
+/* END cardPokemon background colors */
+
+.detail-main {
+    color: white;
+    text-align: center;
+}
+
+.detail-id {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.detail-header {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-header-left {
+    text-align: left;
+    padding: 10px;
+}
+
+.detail-height-weight {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.detail-height-weight-blank {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4px;
+}
+
+.detail-header-right {
+    text-align: center;
+}
+
+.detail-types {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: flex;
+}
+
+.detail-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.detail-img {
+    width: 95%;
+}
+
+.detail-footer {
+    display: block;
+}
+
+.stats {
+    display: flex;
+    margin: 10px;
+}
+
+.stats-col-1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 30%;
+    text-align: left;
+}
+
+.stats-col-3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 30%;
+    text-align: right;
+}
+
+.stats-bars-head {
+    width: 120px;
+}
+
+.stats-bars {
+    padding-top: 20px;
+    margin: 0px 8px;
+    background-color: white;
+    border-radius: 15px;
+  }
+
+.stats-left {
+    display: flex;
+    width: 10%;
+    align-self: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.stats-right {
+    width: 35%;
+}
+
+.stats-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+@media only screen and (max-device-width: 720px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .stats-left {
+        display: flex;
+        width: 15%;
+        align-self: center;
+    }
+    
+    .stats-right {
+        width: 60%;
+    }
+}
